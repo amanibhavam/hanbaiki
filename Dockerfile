@@ -1,11 +1,13 @@
 FROM node:16-buster
 
-RUN install -d -m 0700 /app
-COPY . /app
+RUN npm install -g npm
 
+RUN install -d -m 0700 -o node -g node  /app
+COPY --chown=node:node . /app
+
+USER node
 WORKDIR /app
 
-RUN npm install -g npm
 RUN npm install
 
 CMD [ "npm", "run", "dev" ]
