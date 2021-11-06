@@ -4,6 +4,6 @@ import HelloWorld from './components/HelloWorld.vue'
 
 <template>
   <div class="py-20">
-  <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
+  <HelloWorld msg="Hello lamda, Hana!" />
   </div>
 </template>
