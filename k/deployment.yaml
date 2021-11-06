@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hanbaiki
+  labels:
+    app: hanbaiki
+spec:
+  selector:
+    matchLabels:
+      app: hanbaiki
+  template:
+    metadata:
+      labels:
+        app: hanbaiki
+    spec:
+      containers:
+        - name: hanbaiki
+          image: hanbaiki
+          ports:
+            - name: hanbaiki
+              containerPort: 3000
