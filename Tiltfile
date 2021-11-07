@@ -4,6 +4,6 @@ k8s_yaml(kustomize('k'))
 
 docker_build('hanbaiki', 'front',
   live_update=[
-    sync('front', '/app/front'),
+    sync('front', '/app'),
   ]
 )
