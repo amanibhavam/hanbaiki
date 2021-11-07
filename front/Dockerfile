@@ -7,6 +7,7 @@ RUN install -d -m 0700 -o node -g node  /app
 USER node
 WORKDIR /app
 
+COPY --chown=node:node . /app
 RUN npm install
 
 CMD [ "npm", "run", "dev" ]
