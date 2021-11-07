@@ -3,9 +3,10 @@ import vue from '@vitejs/plugin-vue'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  root: 'src',
   plugins: [vue()],
   server: {
-    host: true, // '100.101.28.35',
+    host: true,
     hmr: {
       clientPort: 443
     }
