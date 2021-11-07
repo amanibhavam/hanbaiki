@@ -8,8 +8,7 @@ docker_build('hanbaiki', 'front',
   ]
 )
 
-docker_build('hanbaiki-dist', 'front',
-  dockerfile='front/Dockerfile.dist',
+docker_build('hanbaiki-dist', 'front/dist',
   live_update=[
     sync('front/dist', '/usr/share/nginx/html'),
   ]
