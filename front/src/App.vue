@@ -119,7 +119,7 @@ import HelloWorld from './HelloWorld.vue'
         </p>
       </div>
       <div class="py-10">
-        <HelloWorld msg="Hello lamda, Hana!" />
+        <HelloWorld msg="Hello Tolan, lamda, Hana!" />
       </div>
     </main>
   </div>
