@@ -7,4 +7,4 @@ COPY --chown=app:app app /app/app
 
 ENTRYPOINT [ "./run" ]
 
-CMD [ "hypercorn", "--worker-class", "trio", "--bind", "0.0.0.0:8000", "app.main:app"  ]
+CMD [ "hypercorn", "--reload", "--worker-class", "trio", "--bind", "0.0.0.0:8000", "app.main:app"  ]
