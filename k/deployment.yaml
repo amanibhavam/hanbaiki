@@ -40,4 +40,4 @@ spec:
           image: hanbaiki-dist
           ports:
             - name: hanbaiki-dist
-              containerPort: 3000
+              containerPort: 80
