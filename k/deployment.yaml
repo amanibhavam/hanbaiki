@@ -19,3 +19,25 @@ spec:
           ports:
             - name: hanbaiki
               containerPort: 3000
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hanbaiki-dist
+  labels:
+    app: hanbaiki-dist
+spec:
+  selector:
+    matchLabels:
+      app: hanbaiki-dist
+  template:
+    metadata:
+      labels:
+        app: hanbaiki-dist
+    spec:
+      containers:
+        - name: hanbaiki-dist
+          image: hanbaiki-dist
+          ports:
+            - name: hanbaiki-dist
+              containerPort: 3000

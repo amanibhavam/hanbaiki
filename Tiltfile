@@ -7,3 +7,10 @@ docker_build('hanbaiki', 'front',
     sync('front', '/app'),
   ]
 )
+
+docker_build('hanbaiki-dist', 'front',
+  dockerfile='front/Dockerfile.dist',
+  live_update=[
+    sync('front/dist', '/app'),
+  ]
+)
