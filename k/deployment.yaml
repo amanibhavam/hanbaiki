@@ -23,23 +23,23 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hanbaiki-dist
+  name: hanbaiki-web
   labels:
-    app: hanbaiki-dist
+    app: hanbaiki-web
 spec:
   selector:
     matchLabels:
-      app: hanbaiki-dist
+      app: hanbaiki-web
   template:
     metadata:
       labels:
-        app: hanbaiki-dist
+        app: hanbaiki-web
     spec:
       containers:
-        - name: hanbaiki-dist
-          image: hanbaiki-dist
+        - name: hanbaiki-web
+          image: hanbaiki-web
           ports:
-            - name: hanbaiki-dist
+            - name: hanbaiki-web
               containerPort: 80
 ---
 apiVersion: apps/v1
@@ -58,8 +58,7 @@ spec:
         app: hanbaiki-api
     spec:
       containers:
-        - name: hanbaiki-api
-          image: hanbaiki-api
+        - name: hanbaiki-api image: hanbaiki-api
           ports:
             - name: hanbaiki-api
               containerPort: 8000

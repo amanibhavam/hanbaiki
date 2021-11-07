@@ -8,7 +8,7 @@ docker_build('hanbaiki', 'front',
   ]
 )
 
-docker_build('hanbaiki-dist', 'front/dist',
+docker_build('hanbaiki-web', 'front/dist',
   live_update=[
     sync('front/dist', '/usr/share/nginx/html'),
   ]
@@ -22,7 +22,7 @@ docker_build('hanbaiki-api', 'api',
 
 load('ext://uibutton', 'cmd_button', 'location')
 
-cmd_button(name='dist',
+cmd_button(name='build for web',
           icon_name='build',
           resource='hanbaiki',
           argv=['bin/chdir-exec', 'front', 'vite', 'build'])
