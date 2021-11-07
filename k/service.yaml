@@ -29,3 +29,19 @@ spec:
   selector:
     app: hanbaiki-dist
   type: ClusterIP
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: hanbaiki-api
+  labels:
+    app: hanbaiki-api
+spec:
+  ports:
+    - name: hanbaiki-api
+      port: 80
+      protocol: TCP
+      targetPort: hanbaiki-api
+  selector:
+    app: hanbaiki-api
+  type: ClusterIP

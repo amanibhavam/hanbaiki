@@ -14,6 +14,12 @@ docker_build('hanbaiki-dist', 'front/dist',
   ]
 )
 
+docker_build('hanbaiki-api', 'api',
+  live_update=[
+    sync('api', '/app'),
+  ]
+)
+
 load('ext://uibutton', 'cmd_button', 'location')
 
 cmd_button(name='dist',
