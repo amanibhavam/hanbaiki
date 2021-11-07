@@ -19,5 +19,5 @@ load('ext://uibutton', 'cmd_button', 'location')
 
 cmd_button(name='dist',
           icon_name='build',
-          location=location.NAV,
+          resource='hanbaiki',
           argv=['bin/chdir-exec', 'front', 'vite', 'build'])
