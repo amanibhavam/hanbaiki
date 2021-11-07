@@ -1,9 +1,9 @@
 FROM k3d-hub.defn.ooo:5000/letfn/whoabot:app
 
-COPY --chown=node:app requirements.txt /app/requirements.txt
+COPY --chown=app:app requirements.txt /app/requirements.txt
 RUN ./run python -m pip install --no-cache-dir --upgrade -r requirements.txt
 
-COPY --chown=node:app app /app/app
+COPY --chown=app:app app /app/app
 
 ENTRYPOINT [ "./run" ]
 
