@@ -2,15 +2,15 @@ analytics_settings(False)
 
 k8s_yaml(kustomize('k'))
 
-docker_build('hanbaiki', 'front',
+docker_build('hanbaiki', 'web',
   live_update=[
-    sync('front', '/app'),
+    sync('web', '/app'),
   ]
 )
 
-docker_build('hanbaiki-web', 'front/dist',
+docker_build('hanbaiki-web', 'web/dist',
   live_update=[
-    sync('front/dist', '/usr/share/nginx/html'),
+    sync('web/dist', '/usr/share/nginx/html'),
   ]
 )
 
@@ -25,4 +25,4 @@ load('ext://uibutton', 'cmd_button', 'location')
 cmd_button(name='build for web',
           icon_name='build',
           resource='hanbaiki',
-          argv=['bin/chdir-exec', 'front', 'vite', 'build'])
+          argv=['bin/chdir-exec', 'web', 'vite', 'build'])
