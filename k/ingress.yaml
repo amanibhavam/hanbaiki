@@ -12,7 +12,7 @@ spec:
 apiVersion: traefik.containo.us/v1alpha1
 kind: IngressRoute
 metadata:
-  name: hanbaiki
+  name: hanbaiki-vue
 spec:
   tls:
     certResolver: letsencrypt
