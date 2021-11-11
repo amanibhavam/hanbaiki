@@ -1,20 +1,22 @@
 analytics_settings(False)
 
+allow_k8s_contexts('katt')
+
 k8s_yaml(kustomize('k'))
 
-docker_build('hanbaiki', 'web',
+docker_build('defn/hanbaiki:vue', 'web',
   live_update=[
     sync('web', '/app'),
   ]
 )
 
-docker_build('hanbaiki-web', 'web/dist',
+docker_build('defn/hanbaiki:web', 'web/dist',
   live_update=[
     sync('web/dist', '/usr/share/nginx/html'),
   ]
 )
 
-docker_build('hanbaiki-api', 'api',
+docker_build('defn/hanbaiki:api', 'api',
   live_update=[
     sync('api', '/app'),
   ]

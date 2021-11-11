@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: hanbaiki
-          image: hanbaiki
+          image: defn/hanbaiki:vue
           ports:
             - name: hanbaiki
               containerPort: 3000
@@ -37,7 +37,7 @@ spec:
     spec:
       containers:
         - name: hanbaiki-web
-          image: hanbaiki-web
+          image: defn/hanbaiki:web
           ports:
             - name: hanbaiki-web
               containerPort: 80
@@ -59,7 +59,7 @@ spec:
     spec:
       containers:
         - name: hanbaiki-api
-          image: hanbaiki-api
+          image: defn/hanbaiki:api
           ports:
             - name: hanbaiki-api
               containerPort: 8000
