@@ -1,10 +1,10 @@
-FROM python:3.10
+FROM registry.mini.defn.ooo:5000/letfn/whoabot:app-0.0.2
 
-COPY requirements.txt requirements.txt
-RUN python -m pip install --no-cache-dir --upgrade -r requirements.txt
+COPY --chown=app:app requirements.txt /app/requirements.txt
+RUN ./run python -m pip install --no-cache-dir --upgrade -r requirements.txt
 
-COPY --chown=app:app app app
+COPY --chown=app:app app /app/app
 
-ENTRYPOINT [ "hypercorn" ]
+ENTRYPOINT [ "./run" ]
 
-CMD [ "--reload", "--worker-class", "trio", "--bind", "0.0.0.0:8000", "app.main:app"  ]
+CMD [ "hypercorn", "--reload", "--worker-class", "trio", "--bind", "0.0.0.0:8000", "app.main:app"  ]
