@@ -12,7 +12,7 @@ spec:
 apiVersion: traefik.containo.us/v1alpha1
 kind: IngressRoute
 metadata:
-  name: hanbaiki-vue
+  name: hanbaiki-web
 spec:
   tls:
     certResolver: letsencrypt
@@ -22,26 +22,8 @@ spec:
   - match: Host(`hanbaiki.defn.ooo`)
     kind: Rule
     services:
-    - name: hanbaiki-vue
-      port: 3000
-    middlewares:
-      - name: traefik-forward-auth
----
-apiVersion: traefik.containo.us/v1alpha1
-kind: IngressRoute
-metadata:
-  name: hanbaiki-web
-spec:
-  tls:
-    certResolver: letsencrypt
-  entryPoints:
-    - websecure
-  routes:
-  - match: Host(`hanbaiki-web.defn.ooo`)
-    kind: Rule
-    services:
     - name: hanbaiki-web
-      port: 80
+      port: 3000
     middlewares:
       - name: traefik-forward-auth
 ---

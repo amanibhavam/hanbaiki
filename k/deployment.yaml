@@ -1,28 +1,6 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hanbaiki-vue
-  labels:
-    app: hanbaiki-vue
-spec:
-  selector:
-    matchLabels:
-      app: hanbaiki-vue
-  template:
-    metadata:
-      labels:
-        app: hanbaiki-vue
-    spec:
-      containers:
-        - name: hanbaiki-vue
-          image: defn/hanbaiki:vue
-          ports:
-            - name: hanbaiki-vue
-              containerPort: 3000
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
   name: hanbaiki-web
   labels:
     app: hanbaiki-web
@@ -40,7 +18,7 @@ spec:
           image: defn/hanbaiki:web
           ports:
             - name: hanbaiki-web
-              containerPort: 80
+              containerPort: 3000
 ---
 apiVersion: apps/v1
 kind: Deployment
