@@ -1,8 +1,8 @@
 analytics_settings(False)
 
-allow_k8s_contexts('imac')
+load('ext://uibutton', 'cmd_button', 'location')
 
-k8s_yaml(kustomize('k'))
+allow_k8s_contexts('imac')
 
 docker_build('defn/hanbaiki:web', 'web',
   live_update=[
@@ -16,4 +16,4 @@ docker_build('defn/hanbaiki:api', 'api',
   ]
 )
 
-load('ext://uibutton', 'cmd_button', 'location')
+k8s_yaml(kustomize('k'))
