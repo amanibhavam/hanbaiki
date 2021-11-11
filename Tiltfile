@@ -26,5 +26,5 @@ load('ext://uibutton', 'cmd_button', 'location')
 
 cmd_button(name='build for web',
           icon_name='build',
-          resource='hanbaiki',
+          resource='hanbaiki-vue',
           argv=['bin/chdir-exec', 'web', 'vite', 'build'])
