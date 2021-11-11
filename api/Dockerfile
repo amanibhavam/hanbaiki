@@ -1,4 +1,6 @@
-FROM registry.mini.defn.ooo:5000/letfn/whoabot:app-0.0.2
+ARG IMAGE
+
+FROM $IMAGE
 
 COPY --chown=app:app requirements.txt /app/requirements.txt
 RUN ./run python -m pip install --no-cache-dir --upgrade -r requirements.txt

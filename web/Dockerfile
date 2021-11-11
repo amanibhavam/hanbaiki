@@ -1,4 +1,6 @@
-FROM node:16-buster
+ARG IMAGE
+
+FROM $IMAGE
 
 RUN npm install -g npm
 
