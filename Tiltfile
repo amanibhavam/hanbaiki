@@ -1,6 +1,6 @@
 analytics_settings(False)
 
-allow_k8s_contexts('mini')
+allow_k8s_contexts('imac')
 
 k8s_yaml(kustomize('k'))
 
