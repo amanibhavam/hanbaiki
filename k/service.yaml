@@ -1,17 +1,17 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: hanbaiki
+  name: hanbaiki-vue
   labels:
-    app: hanbaiki
+    app: hanbaiki-vue
 spec:
   ports:
-    - name: hanbaiki
+    - name: hanbaiki-vue
       port: 3000
       protocol: TCP
-      targetPort: hanbaiki
+      targetPort: hanbaiki-vue
   selector:
-    app: hanbaiki
+    app: hanbaiki-vue
   type: ClusterIP
 ---
 apiVersion: v1

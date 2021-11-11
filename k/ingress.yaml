@@ -22,7 +22,7 @@ spec:
   - match: Host(`hanbaiki.defn.ooo`)
     kind: Rule
     services:
-    - name: hanbaiki
+    - name: hanbaiki-vue
       port: 3000
     middlewares:
       - name: traefik-forward-auth
