@@ -10,5 +10,5 @@ command: vendor: exec.Run & {
 }
 
 command: gen: boot.#Command & {
-	"cfg": python
+	"cfg": cfg.python
 }

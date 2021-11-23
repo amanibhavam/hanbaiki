@@ -4,4 +4,4 @@ import (
 	"github.com/defn/boot"
 )
 
-python: boot.#Python
+cfg: python: boot.#Python
