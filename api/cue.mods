@@ -3,5 +3,5 @@ module github.com/letfn/katt-argocd
 cue v0.4.0
 
 require (
-  github.com/defn/boot v0.0.12
+  github.com/defn/boot v0.0.13
 )
