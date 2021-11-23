@@ -9,6 +9,6 @@ command: vendor: exec.Run & {
 	cmd: "hof mod vendor"
 }
 
-command: gen: boot.#Command & {
-	"cfg": cfg.python
+command: boot.#Plugins & {
+	"cfg": cfg
 }

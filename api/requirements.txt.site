@@ -1,5 +1,2 @@
-black
-isort
-flake8
 fastapi
 hypercorn[trio]
