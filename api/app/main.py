@@ -1,10 +1,9 @@
+import asyncio
 from typing import Optional
 
 from fastapi import FastAPI
-
-import asyncio
-from hypercorn.config import Config
 from hypercorn.asyncio import serve
+from hypercorn.config import Config
 
 app = FastAPI()
 
