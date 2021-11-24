@@ -1,3 +1,4 @@
- package boot
+package boot
 
-_boot: version: "v0.0.25"
+cfg: boot: module: "github.com/amanibhavam/hanbaiki"
+cfg: boot: version: "v0.0.26"
